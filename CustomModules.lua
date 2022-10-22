@@ -44,12 +44,12 @@ BetterAntiVoid = GuiLibrary["ObjectsThatCanBeSaved"]["WorldWindow"]["Api"].Creat
 		end
 	})
 
-    Height = BetterAntiVoid.CreateSlider({
-		["Name"] = "Height",
+    Up = BetterAntiVoid.CreateSlider({
+		["Name"] = "Up",
 		["Min"] = 1,
-		["Max"] = 100,
+		["Max"] = 14,
 		["HoverText"] = "cool",
 		["Function"] = function(val)
-			Height = val
+			Up = val
 		 end
 	})
