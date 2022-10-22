@@ -27,9 +27,10 @@ InfiniteJump = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].Creat
 
 
 
-BetterAntiVoid = GuiLibrary["ObjectsThatCanBeSaved"]["WorldWindow"]["Api"].CreateOptionsButton({
-		["Name"] = "Betterantivoid",
-		["HoverText"] = "A better Antivoid",
+    local AntiVoid1 = {["Enabled"] = false}
+	AntiVoid1 = GuiLibrary["ObjectsThatCanBeSaved"]["WorldWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "ApeAntiVoid",
+		["HoverText"] = "Kinda Like Rektskys AntiVoid",
 		["Function"] = function(callback)
 			if callback then
 				local Antivoid2 = Instance.new("Part",game.workspace)
@@ -39,17 +40,17 @@ BetterAntiVoid = GuiLibrary["ObjectsThatCanBeSaved"]["WorldWindow"]["Api"].Creat
 				Antivoid2.Position = Vector3.new(0, ylevel, 0)
 				Antivoid2.Name = "Antivoid2"
 			else
-				game:GetService("Workspace").Antivoid2:Destroy()
+				game:GetService("Workspace").Antivoid2:Destroy() -- This is Not Skided Roxa#6969 Helped Disabling The Module
 			end
 		end
 	})
 
-    Up = BetterAntiVoid.CreateSlider({
-		["Name"] = "Up",
+    ylevel = AntiVoid1.CreateSlider({
+		["Name"] = "YLevel",
 		["Min"] = 1,
-		["Max"] = 14,
-		["HoverText"] = "cool",
+		["Max"] = 12,
+		["HoverText"] = "Epic",
 		["Function"] = function(val)
-			Up = val
+			ylevel = val
 		 end
 	})
