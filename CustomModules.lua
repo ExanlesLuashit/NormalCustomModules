@@ -23,3 +23,33 @@ InfiniteJump = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].Creat
     end,
     ["HoverText"] = "Makes you infinite jump"
 })
+
+
+
+
+BetterAntiVoid = GuiLibrary["ObjectsThatCanBeSaved"]["WorldWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "Betterantivoid",
+		["HoverText"] = "A better Antivoid",
+		["Function"] = function(callback)
+			if callback then
+				local Antivoid2 = Instance.new("Part",game.workspace)
+				Antivoid2.Size = Vector3.new(3000,50,3000)
+				Antivoid2.Anchored = true
+				Antivoid2.CanCollide = true
+				Antivoid2.Position = Vector3.new(0, ylevel, 0)
+				Antivoid2.Name = "Antivoid2"
+			else
+				game:GetService("Workspace").Antivoid2:Destroy()
+			end
+		end
+	})
+
+    Height = BetterAntiVoid.CreateSlider({
+		["Name"] = "Height",
+		["Min"] = 1,
+		["Max"] = 100,
+		["HoverText"] = "cool",
+		["Function"] = function(val)
+			Height = val
+		 end
+	})
