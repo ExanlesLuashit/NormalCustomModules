@@ -26,8 +26,21 @@ InfiniteJump = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].Creat
 
 
 
+repeat
+    task.wait()
+until game:IsLoaded()
+repeat
+    task.wait()
+until shared.GuiLibrary
+local GuiLibrary = shared.GuiLibrary
+local ScriptSettings = {}
+local UIS = game:GetService("UserInputService")
+local COB = function(tab, argstable)
 
-MultiAura = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+end
+
+
+    MultiAura = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
         ["Name"] = "MultiAura",
         ["Function"] = function(callback)
             if callback then
@@ -39,7 +52,7 @@ MultiAura = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOp
                         local selfpos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
                         local newpos = plr.Character.HumanoidRootPart.Position
                         bedwars["ClientHandler"]:Get(bedwars["PaintRemote"]):SendToServer(selfpos, CFrame.lookAt(selfpos, newpos).lookVector)
-                 end
+
             end
         end,
     })
