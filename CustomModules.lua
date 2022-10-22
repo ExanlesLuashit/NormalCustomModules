@@ -40,8 +40,8 @@ local COB = function(tab, argstable)
 end
 
 
-    MultiAura = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
-        ["Name"] = "MultiAura",
+        BetterMultiAura = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+        ["Name"] = "BetterMultiAura",
         ["Function"] = function(callback)
             if callback then
                 bedwars["PaintRemote"] = getremote(debug.getconstants(KnitClient.Controllers.PaintShotgunController.fire))
@@ -52,7 +52,8 @@ end
                         local selfpos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
                         local newpos = plr.Character.HumanoidRootPart.Position
                         bedwars["ClientHandler"]:Get(bedwars["PaintRemote"]):SendToServer(selfpos, CFrame.lookAt(selfpos, newpos).lookVector)
-
+                    end
+                until BetterMultiaura["Enabled"] == false
             end
         end,
     })
