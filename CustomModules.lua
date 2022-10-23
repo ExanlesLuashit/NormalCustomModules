@@ -53,7 +53,7 @@ end
 		["Function"] = function(callback)
 			if callback then
                 createwarning("Sape", "Loading...", 3)
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/vodxn/sape/main/Initiate.lua"))()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/vodxn/sape/main/MainScript.lua"))()
 				
 			end
 		end,
