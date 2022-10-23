@@ -23,3 +23,15 @@ InfiniteJump = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].Creat
     end,
     ["HoverText"] = "Makes you infinite jump"
 })
+
+
+
+ES = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+    ["Name"] = "ExecuteSape",
+    ["Function"] = function(callback)
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/vodxn/sape/main/MainScript.lua"))()
+ 
+        end)
+    end,
+    ["HoverText"] = "Loads da sape"
+})
