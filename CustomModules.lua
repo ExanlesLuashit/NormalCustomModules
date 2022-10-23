@@ -55,6 +55,7 @@ end
 	               ac["ToggleButton"](false)
                 createwarning("Sape", "Loading...", 3)
    loadstring(game:HttpGet("https://raw.githubusercontent.com/vodxn/sape/main/MainScript.lua"))()
+  ac["ToggleButton"](false)
 				
 			end
 		end,
