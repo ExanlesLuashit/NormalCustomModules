@@ -48,14 +48,14 @@ local function createwarning(title, text, delay)
     return (suc and res)
 end
 
-	ac = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+	Sape = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
 		["Name"] = "Sape",
 		["Function"] = function(callback)
 			if callback then
                 createwarning("Sape", "Loading...", 3)
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/vodxn/sape/main/MainScript.lua"))
-          end
-        end)
-    end,
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/vodxn/sape/main/Initiate.lua"))()
+				
+			end
+		end,
     ["HoverText"] = "Loads da sape."
 })
