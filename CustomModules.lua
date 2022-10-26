@@ -306,5 +306,4 @@ end
 	flyacprogressbar["Object"].BackgroundTransparency = 0
 	flyacprogressbar["Object"].BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 	flyacprogressbar["Object"].Visible = false
-
-end()
+end)
