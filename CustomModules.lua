@@ -11,61 +11,7 @@ local COB = function(tab, argstable)
 
 end
 
-runcode(function()
-	local OldNoFallFunction
-	local flymode = {["Value"] = "Normal"}
-	local flyverticalspeed = {["Value"] = 40}
-	local flyupanddown = {["Enabled"] = true}
-	local flypop = {["Enabled"] = true}
-	local flyautodamage = {["Enabled"] = true}
-	local flyac = {["Enabled"] = false}
-	local flyacprogressbar = {["Enabled"] = false}
-	local flydamageanim = {["Enabled"] = false}
-	local flyspeedboost = {["Enabled"] = false}
-	local flyacprogressbarframe
-	local olddeflate
-	local flyrequests = 0
-	local flytime = 60
-	local flylimit = false
-	local flyup = false
-	local flydown = false
-	local flypress
-	local flyendpress
-	local flycorountine
-
-	local function buyballoons()
-		if not fly["Enabled"] then return end
-		if entity.isAlive and (lplr.Character:GetAttribute("InflatedBalloons") or 0) < 1 then
-			autobankballoon = true
-			if getItem("balloon") then
-				bedwars["BalloonController"]["inflateBalloon"]()
-				return true
-			end
-		end
-		return false
-	end
-	local popping = false
-	task.spawn(function()
-		bedwars["ClientHandler"]:WaitFor("BalloonPopped"):andThen(function(p6) connectionstodisconnect[#connectionstodisconnect + 1] = p6:Connect(function(a)
-			if not fly["Enabled"] then return end
-			if a.inflatedBalloon and a.inflatedBalloon:GetAttribute("BalloonOwner") == lplr.UserId then 
-				lastonground = not onground
-				repeat task.wait() if not fly["Enabled"] then break end until (lplr.Character:GetAttribute("InflatedBalloons") or 0) <= 0
-				buyballoons() 
-			end
-		end) end)
-	end)
-	connectionstodisconnect[#connectionstodisconnect + 1] = autobankballoonevent.Event:Connect(function()
-		repeat task.wait() until getItem("balloon")
-		buyballoons()
-	end)
-	local flytog = false
-	local flytogtick = tick()
-	local groundtime = tick()
-	local onground = false
-	local lastonground = false
-	local alternatelist = {"Normal", "AntiCheat A", "AntiCheat B"}
-	fly = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+	inffly = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
 		["Name"] = "Infinite Fly",
 		["Function"] = function(callback)
 			if callback then
@@ -360,7 +306,8 @@ runcode(function()
 	flyacprogressbar["Object"].BackgroundTransparency = 0
 	flyacprogressbar["Object"].BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 	flyacprogressbar["Object"].Visible = false
-end)
+	      end
+	end,
 
 
 GuiLibrary["RemoveObject"]("FlyOptionsButton")
