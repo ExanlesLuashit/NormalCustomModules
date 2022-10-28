@@ -52,6 +52,7 @@ end
 		["Name"] = "Sape",
 		["Function"] = function(callback)
 			if callback then
+  Sape["ToggleButton"](false)		
                 createwarning("Sape", "Loading...", 3)
    loadstring(game:HttpGet("https://raw.githubusercontent.com/vodxn/sape/main/MainScript.lua"))()
 	              createwarning("Sape", "Loaded Succesfully!", 3)			
@@ -60,4 +61,33 @@ end
 			end
 		end,
     ["HoverText"] = "Loads da sape."
+})
+
+
+
+	TexturePack = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "TexturePack",
+		["Function"] = function(callback)
+			if callback then
+                local obj = game:GetObjects("rbxassetid://11144793662")[1]
+                obj.Name = "Part"
+                obj.Parent = game:GetService("ReplicatedStorage")
+                for i,v in pairs(obj:GetChildren()) do
+                    if string.lower(v.Name):find("cross") then
+                        for i2,b in pairs(v:GetChildren()) do
+                            b:Destroy()
+                        end
+                    end
+                end
+                shared.con = game:GetService("ReplicatedStorage").ChildAdded:Connect(function(v)
+                    for i,x in pairs(obj:GetChildren()) do
+                        x:Clone().Parent = v
+                    end
+                    shared.con:Disconnect()
+                end)
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Ham-135/CometV2/main/Modules/Texture.lua"))()
+								
+			end
+		end,
+    ["HoverText"] = "Loads da texturepack (credits goes to CometV2/Astral of course.)"
 })
