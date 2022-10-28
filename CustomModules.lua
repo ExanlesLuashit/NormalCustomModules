@@ -89,5 +89,5 @@ end
 								
 			end
 		end,
-    ["HoverText"] = "Loads da texturepack (credits goes to CometV2/Astral of course.)"
+    ["HoverText"] = "Loads da texturepack (credits goes to CometV2/Astral of course)."
 })
