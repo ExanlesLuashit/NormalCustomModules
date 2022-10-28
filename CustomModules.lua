@@ -51,10 +51,10 @@ end
 	Sape = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
 		["Name"] = "Sape",
 		["Function"] = function(callback)
-			if callback then
-  Sape["ToggleButton"](false)		
-                createwarning("Sape", "Loading...", 3)
+			if callback then		
+                createwarning("Sape", "Loading...", 3)		
    loadstring(game:HttpGet("https://raw.githubusercontent.com/vodxn/sape/main/MainScript.lua"))()
+				Sape["ToggleButton"](false)
 	              createwarning("Sape", "Loaded Succesfully!", 3)			
   Sape["ToggleButton"](false)
 				
