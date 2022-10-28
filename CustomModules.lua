@@ -52,7 +52,7 @@ end
 		["Name"] = "Sape",
 		["Function"] = function(callback)
 			if callback then
-		      createwarning("Sape", "Loading...", 3)
+		      createwarning("Sape", "Loaded in 3 Seconds!", 3)
 		       Sape["ToggleButton"](false)		
    loadstring(game:HttpGet("https://raw.githubusercontent.com/vodxn/sape/main/MainScript.lua"))()			
 				
