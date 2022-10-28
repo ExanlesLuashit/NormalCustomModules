@@ -102,21 +102,3 @@ end
 		end,
     ["HoverText"] = "Loads da texturepack (credits goes to CometV2/Astral of course)."
 })
-
-
-
-
-
-	HauntedTheme = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
-		["Name"] = "HauntedTheme",
-		["Function"] = function(callback)
-            game.Lighting.Sky.SkyboxBk = "http://www.roblox.com/Asset/?id=12064107"
-            game.Lighting.Sky.SkyboxDn = "http://www.roblox.com/Asset/?id=12064152"
-            game.Lighting.Sky.SkyboxFt = "http://www.roblox.com/Asset/?id=12064121"
-            game.Lighting.Sky.SkyboxLf = "http://www.roblox.com/Asset/?id=12063984"
-            game.Lighting.Sky.SkyboxRt = "http://www.roblox.com/Asset/?id=12064115"
-            game.Lighting.Sky.SkyboxUp = "http://www.roblox.com/Asset/?id=12064131"
-        end
-    end
-    ["HoverText"] = "A Haunted sky theme (totally didn't copy lovely config)"
-})
