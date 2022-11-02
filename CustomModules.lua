@@ -70,7 +70,6 @@ end
 		["Function"] = function(callback)
 	            repeat
                         task.wait(0.12)
-			if callback then
                         local nearest = getnearestplayer(Distance["Value"])
                         if nearest ~= nil and nearest.Team ~= lplr.Team and isalive(nearest) and nearest.Character:FindFirstChild("Humanoid").Health > 0.1 and isalive(lplr) and lplr.Character:FindFirstChild("Humanoid").Health > 0.1 and not nearest.Character:FindFirstChild("ForceField") then
                             local sword = getSword()
