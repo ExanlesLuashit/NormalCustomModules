@@ -68,7 +68,9 @@ end
 	MultiAura = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
 		["Name"] = "MultiAura",
 		["Function"] = function(callback)
-	            repeat
+		         if callback then
+                spawn(function()
+                    repeat
                         task.wait(0.12)
                         local nearest = getnearestplayer(Distance["Value"])
                         if nearest ~= nil and nearest.Team ~= lplr.Team and isalive(nearest) and nearest.Character:FindFirstChild("Humanoid").Health > 0.1 and isalive(lplr) and lplr.Character:FindFirstChild("Humanoid").Health > 0.1 and not nearest.Character:FindFirstChild("ForceField") then
