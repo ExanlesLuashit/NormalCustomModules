@@ -96,8 +96,9 @@ end
                                         ["targetPosition"] = hashFunc(nearest.Character:FindFirstChild("HumanoidRootPart").Position),
                                         ["selfPosition"] = hashFunc(lplr.Character:FindFirstChild("HumanoidRootPart").Position + ((lplr.Character:FindFirstChild("HumanoidRootPart").Position - nearest.Character:FindFirstChild("HumanoidRootPart").Position).magnitude > 14 and (CFrame.lookAt(lplr.Character:FindFirstChild("HumanoidRootPart").Position, nearest.Character:FindFirstChild("HumanoidRootPart").Position).LookVector * 4) or Vector3.new(0, 0, 0)))
                                     },
-                                    ["chargedAttack"] = {["chargeRatio"] = 0.8}			
-			end
-		end,
+                                    ["chargedAttack"] = {["chargeRatio"] = 0.8}
+			         end 
+			     end						
+			end,							
     ["HoverText"] = "A OP MutliAura."
 })
