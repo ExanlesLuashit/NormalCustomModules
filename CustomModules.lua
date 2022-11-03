@@ -102,6 +102,5 @@ runcode(function()
 		end
             end
         end,
-        ["HoverText"] = "cool mutliaura."
-	end)
-end)
+       ["HoverText"] = "cool mutliaura."
+})
