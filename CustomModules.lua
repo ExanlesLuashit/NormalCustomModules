@@ -62,24 +62,10 @@ end
 })
 
 
-
-repeat
-    task.wait()
-until game:IsLoaded()
-repeat
-    task.wait()
-until shared.GuiLibrary
-local GuiLibrary = shared.GuiLibrary
-local ScriptSettings = {}
-local UIS = game:GetService("UserInputService")
-local COB = function(tab, argstable)
-
-end
-
 runcode(function()
     local MultiAura = {["Enabled"] = false}
-    MultiAura = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
-        ["Name"] = "MutiAura",
+    mml = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+        ["Name"] = "mml",
         ["Function"] = function(callback)
             if callback then
                 spawn(function()
@@ -110,13 +96,12 @@ runcode(function()
                                         ["selfPosition"] = hashFunc(lplr.Character:FindFirstChild("HumanoidRootPart").Position + ((lplr.Character:FindFirstChild("HumanoidRootPart").Position - nearest.Character:FindFirstChild("HumanoidRootPart").Position).magnitude > 14 and (CFrame.lookAt(lplr.Character:FindFirstChild("HumanoidRootPart").Position, nearest.Character:FindFirstChild("HumanoidRootPart").Position).LookVector * 4) or Vector3.new(0, 0, 0)))
                                     },
                                     ["chargedAttack"] = {["chargeRatio"] = 0.8}
-                                })
-                            end)
-                        end
-                    until not Enabled
-				end
+                                  end)
+                               end
+                   until not Enabled
+		end
             end
         end,
-        ["HoverText"] = "I fucking hate you Exanles\nFor making me fix this"
+        ["HoverText"] = "cool mutliaura."
 	end)
 end)
