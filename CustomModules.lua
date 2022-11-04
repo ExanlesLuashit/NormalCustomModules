@@ -68,7 +68,6 @@ end
 
 
 
-runcode(function()
     local BedwarsSwords = require(game:GetService("ReplicatedStorage").TS.games.bedwars["bedwars-swords"]).BedwarsSwords
     function hashFunc(vec) 
         return {value = vec}
@@ -115,6 +114,7 @@ runcode(function()
         end
         return returning
     end
+runcode(function()
 mlaura = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
     ["Name"] = "NewMutliAura",
     ["Function"] = function(callback)
@@ -155,6 +155,8 @@ mlaura = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptio
     end
 end
 })
-end)
+end)				
+            end
+	end,
     ["HoverText"] = "a OP multiaura."
 })
