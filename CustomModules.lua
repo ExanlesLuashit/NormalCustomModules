@@ -69,6 +69,16 @@ end
 		["Name"] = "TexturePack",
 		["Function"] = function(callback)
 			if callback then
+   local obj = game:GetObjects("rbxassetid://11144793662")[1]
+    obj.Name = "Part"
+    local connection
+    connection = game:GetService("ReplicatedStorage").ChildAdded:Connect(function(v)
+	 for i,x in pairs(obj:GetChildren()) do
+		 local c = x:Clone()
+		 c.Parent = v
+	    end
+	   connection:Disconnect()
+        end)
    loadstring(game:HttpGet("https://raw.githubusercontent.com/ExanlesLuashit/Vape-CustomModules/main/Astral-Minecraft-TexturePack"))()			
 				
 			end
